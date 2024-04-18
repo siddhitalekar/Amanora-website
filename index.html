@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css"
+        integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        
+</head>
+<style>
+  .owl-carousel {
+      position: relative;
+  }
+  .owl-carousel .owl-item {
+      position: relative;
+      overflow: hidden;
+  }
+  .owl-carousel .owl-item img {
+      width: 100%;
+      display: block;
+      opacity: 0.5;
+      transition: opacity 0.3s ease-in-out;
+  }
+  .owl-carousel .owl-item.active img {
+      opacity: 1;
+  }
+  .owl-carousel .owl-item.middle img {
+    opacity: 1;
+            transform: translateY(-20%);
+            z-index: 1;
+            transition: transform 0.3s ease-in-out;
+        }
+        .carousel-text {
+            /* display: none; */
+            position: absolute;
+            bottom: 10px;
+            left: 0;
+            right: 0;
+             background-color:  rgb(5, 5, 57);
+            color: white;
+            font-size: 20px;
+        }
+        .owl-carousel .owl-item.middle .carousel-text {
+            display: block;
+        }
+        
+        </style>
+<body>
+    <header class="header">
+        <nav class="navbar navbar-expand-md nav-mannual sticky">
+            <div class="container">
+                <a href=""class="navbar-brand"><img src="images/logo (1).png"></a>
+                <button class="navbar-toggler"type="button"data-toggle="collapse"data-target="#collapsenavbar">
+                    <span class="navbar-toggler-icon" style="color: #E2A99C;"></span>
+                </button>
+               <div class="collapse navbar-collapse text-center"id="collapsenavbar">
+                 <ul class="navbar-nav ml-auto">
+                     <li class="nav-item text-white"id=""><a style="color: #FFFFFF;" href="#home" class="nav-link">Home</a></li>
+                     <li class="nav-item text-white"id=""><a style="color: #FFFFFF;" href="#Overview" class="nav-link">Overview</a></li>
+                     <li class="nav-item text-white"id=""><a style="color: #FFFFFF;" href="#Location" class="nav-link">Location</a></li>
+                     <li class="nav-item text-white"id=""><a style="color: #FFFFFF;" href="#Amenities" class="nav-link">Amenities</a></li>
+                     <li class="nav-item text-white"id=""><a style="color: #FFFFFF;" href="#Specification" class="nav-link">Specification</a></li>
+                     <li class="nav-item text-white"id=""><a  style="color: #FFFFFF;"href="#About" class="nav-link">About</a></li>
+                 </ul>
+                  <div class="number">
+                     <span style="color: white;font-size:20PX;margin-left: 10px;margin-top: 8px;"><p class="fa fa-phone"> +91 20 6705 7005</p></span>
+                </div>
+                <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" data-display="static" aria-expanded="false">
+                  enquire now
+                </button>
+                <form class="dropdown-menu p-4" id="drop">
+                  <div class="form-group">
+                    <label for="exampleDropdownFormEmail2">Email address</label>
+                    <input type="email" class="form-control" id="exampleDropdownFormEmail2" placeholder="email@example.com">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleDropdownFormPassword2">Password</label>
+                    <input type="password" class="form-control" id="exampleDropdownFormPassword2" placeholder="Password">
+                  </div>
+                  <div class="form-group">
+                    <div class="form-check">
+                      <input type="checkbox" class="form-check-input" id="dropdownCheck2">
+                      <label class="form-check-label" for="dropdownCheck2">
+                        Remember me
+                      </label>
+                    </div>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Sign in</button>
+                </form>
+                
+            </div>
+           </div>
+        </nav>
+    </header>
+    <section class="section-hero" id="home">
+     <div class="big">
+        <div class="mid" style="text-align: center;">
+            <h1 style="color: #FFFFFF;font-size: 45px;font-family: LTCbodoni;padding-top: 20px;">Welcome to an experience,<br class="hidden-xs">
+                Pune’s never experienced before</h1>
+                <p style="color: #FFFFFF;font-size:20px;font-family: sans-serif;font-weight: 300;padding-top: 20px;">Crown Towers by Amanora</p>
+                <p style="color: #FFFFFF;font-size: 22px;font-family: sans-serif;padding-top: 10px;">Luxurious 2, 2.5, 3 and 4 BHK & Duplex Apartments<br class="hidden-xs">
+                    Starting from <strong>₹1.58 CR*</strong></p>
+        </div>
+ </div>
+</section>
+<div class="bgimg" id="Overview">
+    <div class="row">
+        <div class="col">
+            <img style="width:80%;margin-left:5%; padding-left: 5%;margin-top:0%;" class="col rel" src="images/overview.png" >
+            <div class="circle"></div>
+        </div>
+        <div class="col">
+            <div class="contnt">
+                <h2 style="font-size: 45px;"class="section-title bodoni text-peach revealOnScroll animated fadeInRight" data-animation="fadeInRight" data-timeout="500">Iconic at the top.<br>
+                    Incredible at every level.
+                </h2>
+                <p class="para section-para text-white opensans revealOnScroll animated fadeInRight" data-animation="fadeInRight" data-timeout="700">Crown Towers is not just an address, it’s a lifestyle<br>
+                experience. While indoors offer sensibly designed spaces for<br>
+                luxurious indoor living, the common spaces put together a<br>
+                sensational lifestyle, to ensure that every aspect is a curated<br>
+                experience.</p>
+                <h3 class="head revealOnScroll cs animated fadeInRight" data-animation="fadeInRight" data-timeout="900">Welcome to an experience Pune hasn’t experienced before.</h3>
+                <div class="button enquire-btn dbro open-form extLink white-btn opensans revealOnScroll animated fadeInRight" data-animation="fadeInRight" data-timeout="1200"><button class="btn">ENQUIRE NOW</button></div>
+            </div>
+        </div>
+        </div>
+        <div class="banner-caption text-center">
+            <div class="main">
+            <div class="text" data-animation="slideleft"data-timeout="700">
+            <h1 style="font-size: 46px;" class="section _title section-title bodoni revealOnScroll text-peach text-capitalize animated fadeInUp" data-animation="fadeInUp" data-timeout="700">Pune’s Tallest SKYPARK<br class="hidden-xs">Experience Is Here.</h1>
+            </div>
+            <p class="in section-para text-white opensans revealOnScroll animated fadeInUp" data-animation="fadeInUp" data-timeout="700">When we say that Crown Towers takes you to the top of the world, we mean<br class="hidden-xs">
+                every word of it. At SKYPARK 31, indulge in a rooftop experience that is<br class="hidden-xs">
+                unmatched, unprecedented and unparalleled in Pune.</p>
+                <div class="button"><button class="btn enquire-btn dbro open-form extLink white-btn opensans revealOnScroll animated fadeInUp" data-animation="fadeInUp" data-timeout="700">ENQUIRE NOW</button></div>
+                </div>
+        </div>
+</div>
+</div>
+<div class="banner" id="Location">
+    <div class="layout">
+        <div class="menu">
+            <h1 style="font-size:45px;" class="lay section-title bodoni revealOnScroll text-peach animated fadeInUp" data-animation="fadeInUp" data-timeout="700">A jewel in the heart of Pune</h1>
+            <p class="itext section-para text-white opensans revealOnScroll animated fadeInUp" data-animation="fadeInUp" data-timeout="900">There is never a dull moment in Crown Tower and not even around it.<br class="hidden-xs">
+                Living here brings you closer to hassle free living.</p>
+                <div class=build>
+                    <a target="_blank" href="https://www.google.com/maps/dir/18.579456,73.760768/crown+towers+amanora/@18.5552812,73.682915,11z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x3bc2c3bd2dc98ae3:0xd11124908f00d548!2m2!1d73.939778!2d18.5175201?entry=ttu"><img src="images/building.png"></a> 
+               </div>
+               <div class="pin">
+               <img style="width:70px;margin-top: -8%;" class="buil"  src="images/location-pin.png">
+               </div>
+        </div>
+    </div>
+</div>
+ <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel"style="position:relative" >
+  <div class="carousel-caption d-none d-md-block section-title bodoni text-white revealOnScroll animated fadeInLeft"  style="position:absolute; top: 15%;" data-animation="fadeInLeft" data-timeout="700">
+    <div>
+    <h1 style="font-family: LTCbodoni;font-size: 43px;">Two levels of</h1>
+    <h1 style="font-family:  LTCbodoni;font-size: 43px;">World class leisure & living</h1>
+      <p style="padding-top: 1%;font-size: 17px;" >The world of amenities at Crown Towers is bespoke<br>
+        and one to behold for a lifetime. Split across two<br>
+        grand levels of an elaborate podium, it is a world of<br>
+        treasures awaiting to enthrall you.</p>
+      
+      <div class="button" style="padding-top: 1%;">
+        <button class="btn">ENQUIRE NOW</button>
+      </div>
+    </div>
+     <div class="img">
+      <img src="https://amanora.com/crown-towers/images/right.svg" id="prevBtn">
+      <img style="margin-left: 10px;" src="https://amanora.com/crown-towers/images/left.svg" id="nextBtn">
+    </div> 
+      
+</div> 
+
+  <div class="carousel-inner" style="position:relative;" id="Amenities">
+  <div class="carousel-item active">
+      <img src="images/amenity-1.jpg" class="d-block w-100" alt="..">
+    </div>
+    <div class="carousel-item">
+      <img src="images/amenity-3.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="images/amenity-4.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="images/amenity-5.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="images/amenity-6.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="images/amenity-7.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="images/amenity-8.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="images/amenity-9.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="images/amenity-10.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+     <img src="images/amenity-11.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="images/amenity-12.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="images/amenity-13.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="images/amenity-14.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="images/amenity-15.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="images/amenity-16.jpg" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  </div>
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner" style="margin-top:-42%;position:absolute; width: 270px;margin-left: 70%;">
+    <div class="carousel-item active">
+      <span class="text-white opensans" style="font-size:55px;font-weight: 500;">01</span>
+      
+      <img src="images/amenity-1-thumb.png" class="d-block w-100" alt="..."><h6>Swimming pool</h6>
+      
+    </div>
+    <div class="carousel-item">
+      <span class="text-white opensans" style="font-size:55px;font-weight: 500;padding-right: 20px;">02</span>
+      <img src="images/amenity-3-thumb (1).png" class="d-block w-100" alt="..."></br><h6>Outdoor fitness areas</h6>
+    </div>
+    <div class="carousel-item">
+      <span class="text-white opensans" style="font-size:55px;font-weight: 500;padding-right: 20px;">03</span>
+      <img src="images/amenity-4-thumb.png" class="d-block w-100" alt="..."></br><h6>Indoor gymnasium</h6>
+    </div>
+    <div class="carousel-item">
+      <span class="text-white opensans" style="font-size:55px;font-weight: 500;padding-right: 20px;">04</span>
+      <img src="images/amenity-5-thumb.png" class="d-block w-100" alt="..."></br><h6>250 metre jogging park</h6>
+    </div>
+    <div class="carousel-item">
+      <span class="text-white opensans" style="font-size:55px;font-weight: 500;padding-right: 20px;">05</span>
+      <img src="images/amenity-6-thumb.png" class="d-block w-100" alt="..."></br><h6>Multipurpose hall</h6>
+    </div>
+    <div class="carousel-item">
+      <span class="text-white opensans" style="font-size:55px;font-weight: 500;padding-right: 20px;">06</span>
+      <img src="images/amenity-7-thumb.png" class="d-block w-100" alt="..."></br><h6>Barbeque pits</h6>
+    </div>
+    <div class="carousel-item">
+      <span class="text-white opensans" style="font-size:55px;font-weight: 500;padding-right: 20px;">07</span>
+      <img src="images/amenity-8-thumb.png" class="d-block w-100" alt="..."></br><h6>Jacuzzi</h6>
+      </div>
+    <div class="carousel-item">
+      <span class="text-white opensans" style="font-size:55px;font-weight: 500;padding-right: 20px;">08</span>
+      <img src="images/amenity-9-thumb.png" class="d-block w-100" alt="..."></br><h6>Kid's play area</h6>
+    </div>
+    <div class="carousel-item">
+      <span class="text-white opensans" style="font-size:55px;font-weight: 500;padding-right: 20px;">09</span>
+      <img src="images/amenity-10-thumb.png" class="d-block w-100" alt="..."></br><h6>Kid's pool</h6>
+    </div><div class="carousel-item">
+      <span class="text-white opensans" style="font-size:55px;font-weight: 500;padding-right: 20px;">10</span>
+      <img src="images/amenity-11-thumb.png" class="d-block w-100" alt="..."></br><h6>Games room</h6>
+    </div>
+    <div class="carousel-item">
+      <span class="text-white opensans" style="font-size:55px;font-weight: 500;padding-right: 20px;">11</span>
+      <img src="images/amenity-12-thumb.png" class="d-block w-100" alt="..."></br><h6>Indoor kid's play area</h6>
+    </div>
+    <div class="carousel-item">
+      <span class="text-white opensans" style="font-size:55px;font-weight: 500;padding-right: 20px;">12</span>
+      <img src="images/amenity-13-thumb.png" class="d-block w-100" alt="..."></br><h6>Garden spaces</h6>
+    </div>
+    <div class="carousel-item">
+      <span class="text-white opensans" style="font-size:55px;font-weight: 500;padding-right: 20px;">13</span>
+      <img src="images/amenity-14-thumb.png" class="d-block w-100" alt="..."></br><h6>Exclusive WFH facility</h6>
+    </div>
+    <div class="carousel-item">
+      <span class="text-white opensans" style="font-size:55px;font-weight: 500;padding-right: 20px;">14</span>
+      <img src="images/amenity-15-thumb.png" class="d-block w-100" alt="..."></br><h6>Ample landscaped spaces</h6>
+    </div>
+    <div class="carousel-item">
+      <span class="text-white opensans" style="font-size:55px;font-weight: 500;padding-right: 20px;">15</span>
+      <img src="images/amenity-16-thumb.png" class="d-block w-100" alt="..."></br><h6>Multipurpose play court</h6>
+    </div>
+  </div>
+</div>
+<div class="bgcolor">
+  <div class="container">
+      <div class="row"> 
+          <div class="col" style="margin-left:4%;">   
+              <h1 style="font-family: LTCbodoni;color: #172C47;font-size: 43px;padding-top:6%;margin-left:5%;" class="section-title bodoni text-centerm text-blue revealOnScroll animated fadeInLeft" data-animation="fadeInLeft" data-timeout="500">Infrastructure that caters<br class="hidden-xs">
+                 To holistic living</h1>
+             <p style="color: #222222;font-family: sans-serif;font-size: 17px;margin-top: 20px;margin-left: 5%;" class="section-para text-centerm opensans revealOnScroll animated fadeInLeft" data-animation="fadeInLeft" data-timeout="700">From space design to utility, every facet of Crown<br class="hidden-xs">
+                  Towers gives a sense of being on top of the world</p>
+              <div class="scroll">
+                    <ul class="scroll-ul">
+                      <li>Cohesive designs for ample space and privacy</li>
+                      <li>Expansive views of the horizon on all sides</li>
+                      <li>Fantastic ventilation and natural light</li>
+                      <li>Balconies that seamlessly integrate indoors & outdoors</li>
+                      <li>Individualised green spaces along the façade of the tower</li>
+                      <li>ACs in all bedrooms</li>
+                      <li>Modular kitchen with chimney</li>
+                      <li>Digital locking system</li>
+                      <li>Main entrance door with veneer finish and polish</li>
+                      <li>Branded chrome finished bathroom fittings</li>
+                      <li>Aluminium sliding windows</li>
+                      <li>Gypsum plaster for ceiling and walls</li>
+                      <li>Premium double-glazed flooring</li>
+                      <li>Wooden flooring in master bedroom</li>
+                      <li>Branded door fittings</li>
+                      <li>Designer sanitary ware</li>
+                      <li>Designer dado in toilet up to 7 feet</li>
+                      <li>Geysers in all toilets</li>
+                      <li>Concealed plumbing</li>
+                      <li>Exhaust fans in toilets and kitchen</li>
+                      <li>Piped gas supply</li>
+                      <li>Light and fan fittings</li>
+                      <li>Fire detection and fire suppression systems</li>
+                      <li>Glass elevator</li>
+                    </ul>
+                    </div>
+                    </div>
+                    <div class="col">
+                      <div class="infra">
+                </div>
+                </div>
+              </div>
+        </div>
+  </div>
+  <div class="container">
+  
+    <div class="owl-carousel owl-theme carousel">
+        <div class="item">
+            <img src="images/spec-1.png" alt="">
+            <div class="carousel-text">
+                <h3 style="margin-left: 15px;">Top of the world lifestyle</h3>
+                <ul>
+    
+                    <li>Amanora Club with elite membership</li>
+                    <li>amanora Mall for immersive</li>
+                    <li>shopping ,dining and fun experience</li>
+                    <li>sports arena</li>
+                </ul>
+            </div>
+        </div>
+        <div class="item">
+            <img src="images/spec-2.png" alt="">
+            <div class="carousel-text">
+                <h3 style="margin-left: 15px;">Top quality Sustainability</h3>
+                <ul>
+                    
+                    <li>Sewage Treatment plant</li>
+                    <li>Two exclusive lakes</li>
+                    <li>26-Acre central greens</li>
+                    <li>world's first temple of environment</li>
+                </ul>
+            </div>
+             </div>
+            <div class="item">
+                <img src="images/spec-3.png" alt="">
+                <div class="carousel-text">
+                    <ul>
+                        <h3 style="margin-left: 15px;">Top level convenience</h3>
+                        <li>3 operational Schools within the township</li>
+                        <li>Safe walk-to-school concept</li>
+                        <li>24*7 help desk </li>
+                        <li>Separate township management company </li>
+                    </ul>
+
+                </div>
+            </div>
+            <div class="item">
+                <img src="images/spec-4.png" alt="">
+                <div class="carousel-text">
+                    <h3>Top class infrastructure</h3>
+                    <ul>
+                        <li>Assured water and power</li>
+                        <li>water filtration & treatment plant</li>
+                        <li>Private fire station</li>
+                        <li>Round-the-clock security</li>
+                        </ul>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    
+
+
+
+
+    <script>
+      $('.owl-carousel').owlCarousel({
+          loop: true,
+          nav: true,
+          autoplay: true,
+          autoplayTimeout: 2000,
+          center: true,
+          margin: 10,
+          responsive: {
+              0: {
+                  items: 1
+              },
+              600: {
+                  items: 3
+              },
+              1000: {
+                  items: 3
+              }
+          },
+          onInitialized: function (event) {
+              var middleIndex = Math.floor(event.item.count / 2);
+              var $middleItem = $(event.target).find('.owl-item').eq(middleIndex);
+              $middleItem.addClass('middle');
+          },
+          onTranslated: function (event) {
+              $(event.target).find('.owl-item').removeClass('middle');
+              var middleIndex = Math.floor(event.item.index + event.page.size / 2);
+                var $middleItem = $(event.target).find('.owl-item').eq(middleIndex);
+                $middleItem.addClass('middle');
+            }
+        });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"
+    integrity="sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+    integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>  
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script> 
+<script src="js/script.js"></script> 
+ 
+           
+    
+</body>
+</html>
+
